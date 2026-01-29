@@ -26,6 +26,7 @@ export default function Portfolio() {
                                 src={`/images/work-${work.id}.jpg`}
                                 alt={work.title}
                                 fill
+                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                 className="object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out opacity-80 group-hover:opacity-100"
                             />
 

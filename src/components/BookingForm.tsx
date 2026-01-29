@@ -118,7 +118,7 @@ export default function BookingForm() {
                         value={formData.phone}
                         onChange={handleChange}
                         className="w-full bg-black/50 border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-white transition-colors"
-                        placeholder="+63 912 345 6789"
+                        placeholder="+63 912 325 6759"
                         disabled
                     />
                 </div>

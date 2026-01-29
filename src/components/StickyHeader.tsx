@@ -40,6 +40,9 @@ export default function StickyHeader() {
                     <Link href="#portfolio" className="text-sm uppercase tracking-widest text-gray-400 hover:text-white transition-colors hidden md:block">
                         Work
                     </Link>
+                    <Link href="#contact" className="text-sm uppercase tracking-widest text-gray-400 hover:text-white transition-colors hidden md:block">
+                        Location
+                    </Link>
                     <Link
                         href="/book"
                         className="px-5 py-2 bg-white text-black font-bold text-xs uppercase tracking-wider hover:bg-gray-200 transition-all rounded-sm"

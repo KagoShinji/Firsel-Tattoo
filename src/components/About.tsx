@@ -10,6 +10,8 @@ export default function About() {
                         src="/images/artist.jpg"
                         alt="Artist Portrait"
                         fill
+                        priority
+                        sizes="(max-width: 768px) 100vw, 50vw"
                         className="object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-500"
                     />
                 </div>
@@ -22,7 +24,7 @@ export default function About() {
                         My mission is to transform your vision into permanent art with precision and care.
                     </p>
                     <p className="text-lg text-gray-300 leading-relaxed">
-                        Located in the heart of the city, my private studio offers a safe, sterile, and welcoming environment
+                        Located in F Villa St, Cebu City, my private studio offers a safe, sterile, and welcoming environment
                         for all clients. Whether it&apos;s your first tattoo or your fiftieth, I&apos;m dedicated to providing
                         a professional experience.
                     </p>

@@ -1,6 +1,7 @@
 import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Portfolio from '@/components/Portfolio';
+import Contact from '@/components/Contact';
 import StickyHeader from '@/components/StickyHeader';
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <About />
       <Portfolio />
+      <Contact />
 
       {/* Footer */}
       <footer className="bg-tattoo-gray py-8 text-center text-gray-500 text-sm border-t border-gray-900">
