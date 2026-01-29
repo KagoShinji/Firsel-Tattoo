@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-tattoo-black: #000000;
+  --color-tattoo-gray: #1a1a1a;
+  --color-tattoo-gold: #ffffff;
+  --color-tattoo-red: #808080;
+
+  --font-sans: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --background: var(--color-tattoo-black);
+  --foreground: #ededed;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
