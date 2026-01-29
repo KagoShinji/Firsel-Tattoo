@@ -39,7 +39,7 @@ export default function Portfolio() {
                 </div>
 
                 <div className="mt-16 text-center">
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-white hover:text-gray-300 transition-colors font-semibold tracking-wider uppercase border-b border-transparent hover:border-white pb-1">
+                    <a href="https://www.instagram.com/firsel.tattoo/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-white hover:text-gray-300 transition-colors font-semibold tracking-wider uppercase border-b border-transparent hover:border-white pb-1">
                         View More on Instagram
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
