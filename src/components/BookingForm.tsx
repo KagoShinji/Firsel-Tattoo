@@ -67,8 +67,17 @@ export default function BookingForm() {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="space-y-6 bg-tattoo-gray p-8 rounded-lg border border-gray-800 shadow-xl">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <form onSubmit={handleSubmit} className="space-y-6 bg-tattoo-gray p-8 rounded-lg border border-gray-800 shadow-xl relative overflow-hidden">
+            {/* Disabled Overlay/Message */}
+            <div className="bg-yellow-900/30 border border-yellow-700 p-4 rounded mb-6 flex items-start gap-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-yellow-500 flex-shrink-0 mt-0.5"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" /><line x1="12" y1="9" x2="12" y2="13" /><line x1="12" y1="17" x2="12.01" y2="17" /></svg>
+                <div>
+                    <h4 className="text-yellow-500 font-bold uppercase tracking-wider text-sm mb-1">Booking Temporarily Unavailable</h4>
+                    <p className="text-gray-300 text-sm">Our online booking system is currently under maintenance. Please contact us via Instagram or Facebook to book an appointment.</p>
+                </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 opacity-50 pointer-events-none select-none grayscale">
                 <div className="space-y-2">
                     <label htmlFor="name" className="text-sm uppercase tracking-wider text-gray-400 font-semibold">Full Name</label>
                     <input
@@ -80,6 +89,7 @@ export default function BookingForm() {
                         onChange={handleChange}
                         className="w-full bg-black/50 border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-white transition-colors"
                         placeholder="John Doe"
+                        disabled
                     />
                 </div>
                 <div className="space-y-2">
@@ -93,11 +103,12 @@ export default function BookingForm() {
                         onChange={handleChange}
                         className="w-full bg-black/50 border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-white transition-colors"
                         placeholder="john@example.com"
+                        disabled
                     />
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 opacity-50 pointer-events-none select-none grayscale">
                 <div className="space-y-2">
                     <label htmlFor="phone" className="text-sm uppercase tracking-wider text-gray-400 font-semibold">Phone Number</label>
                     <input
@@ -107,7 +118,8 @@ export default function BookingForm() {
                         value={formData.phone}
                         onChange={handleChange}
                         className="w-full bg-black/50 border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-white transition-colors"
-                        placeholder="+1 (555) 000-0000"
+                        placeholder="+63 912 345 6789"
+                        disabled
                     />
                 </div>
                 <div className="space-y-2">
@@ -121,11 +133,12 @@ export default function BookingForm() {
                         onChange={handleChange}
                         className="w-full bg-black/50 border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-white transition-colors"
                         style={{ colorScheme: 'dark' }}
+                        disabled
                     />
                 </div>
             </div>
 
-            <div className="space-y-2">
+            <div className="space-y-2 opacity-50 pointer-events-none select-none grayscale">
                 <label htmlFor="description" className="text-sm uppercase tracking-wider text-gray-400 font-semibold">Tattoo Idea / Placement</label>
                 <textarea
                     id="description"
@@ -136,6 +149,7 @@ export default function BookingForm() {
                     onChange={handleChange}
                     className="w-full bg-black/50 border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-white transition-colors"
                     placeholder="Describe your idea, size, and body placement..."
+                    disabled
                 ></textarea>
             </div>
 
@@ -146,11 +160,11 @@ export default function BookingForm() {
             )}
 
             <button
-                type="submit"
-                disabled={status === 'submitting'}
-                className="w-full py-4 bg-white text-black font-bold text-lg uppercase tracking-wider hover:bg-gray-200 transition-all transform hover:scale-[1.02] rounded disabled:opacity-50 disabled:cursor-not-allowed"
+                type="button"
+                disabled
+                className="w-full py-4 bg-gray-800 text-gray-500 font-bold text-lg uppercase tracking-wider cursor-not-allowed rounded border border-gray-700"
             >
-                {status === 'submitting' ? 'Submitting...' : 'Request Appointment'}
+                Booking Unavailable
             </button>
         </form>
     );
