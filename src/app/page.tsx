@@ -26,7 +26,7 @@ export default function Home() {
           </a>
         </div>
         <p>&copy; {new Date().getFullYear()} Firsel Tattoo. All rights reserved.</p>
-        <p className="mt-2 text-xs">Designed for Artistry.</p>
+        <p className="mt-2 text-xs">Created by Johnjosfir Roca.</p>
       </footer>
     </main>
   );
